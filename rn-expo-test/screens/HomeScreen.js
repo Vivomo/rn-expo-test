@@ -7,6 +7,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+    PixelRatio
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
@@ -67,13 +68,14 @@ export default class HomeScreen extends React.Component {
   _maybeRenderDevelopmentModeWarning() {
     if (__DEV__) {
       const learnMoreButton = (
-        <Text onPress={this._handleLearnMorePress} style={styles.helpLinkText}>
+        <Text allowFontScaling={false} onPress={this._handleLearnMorePress} style={styles.helpLinkText}>
           Learn more
         </Text>
       );
 
       return (
         <Text style={styles.developmentModeText}>
+            字体缩放了->{PixelRatio.getFontScale()}
           Development mode is enabled, your app will be slower but you can use useful development
           tools. {learnMoreButton}
         </Text>
@@ -106,7 +108,7 @@ const styles = StyleSheet.create({
   developmentModeText: {
     marginBottom: 20,
     color: 'rgba(0,0,0,0.4)',
-    fontSize: 14,
+    fontSize: 14 / PixelRatio.getFontScale(),
     lineHeight: 19,
     textAlign: 'center',
   },
