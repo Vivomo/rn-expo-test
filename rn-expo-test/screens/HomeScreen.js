@@ -33,6 +33,32 @@ export default class HomeScreen extends React.Component {
             />
           </View>
 
+          <Text>测试不同大小文字底部对齐</Text>
+          <View style={{
+            alignItems: 'flex-end',
+              flexDirection: 'row',
+              padding: 10
+          }}>
+            <Text style={{
+              fontSize: 12,
+            }}>小文字</Text>
+
+              <Text style={{
+                fontSize: 16,
+              }}>默认</Text>
+
+              <Text style={{
+                  fontSize: 16,
+                  height: 16
+              }}>(设置高度)</Text>
+
+
+              <Text style={{
+                  fontSize: 16,
+                  height: 16
+              }}>(设置行高)</Text>
+          </View>
+
           <View style={styles.getStartedContainer}>
             {this._maybeRenderDevelopmentModeWarning()}
 
