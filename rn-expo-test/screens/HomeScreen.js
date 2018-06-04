@@ -35,29 +35,68 @@ export default class HomeScreen extends React.Component {
 
           <Text>测试不同大小文字底部对齐</Text>
           <View style={{
-            alignItems: 'flex-end',
+              alignItems: 'flex-end',
               flexDirection: 'row',
+              justifyContent: 'space-between',
               padding: 10
           }}>
             <Text style={{
               fontSize: 12,
-            }}>小文字</Text>
+                borderWidth: 1,
+            }}>12 / default</Text>
 
               <Text style={{
                 fontSize: 16,
-              }}>默认</Text>
+                  borderWidth: 1,
+              }}>16 / default</Text>
 
               <Text style={{
                   fontSize: 16,
+                  borderWidth: 1,
                   height: 16
-              }}>(设置高度)</Text>
+              }}>16 / 16(H)</Text>
 
 
               <Text style={{
                   fontSize: 16,
-                  height: 16
-              }}>(设置行高)</Text>
+                  lineHeight: 16,
+                  borderWidth: 1,
+              }}>16 / 16(LH)</Text>
           </View>
+
+            <Text>测试不同高度文字底部对齐</Text>
+
+            <View style={{
+                alignItems: 'flex-end',
+                justifyContent: 'space-between',
+                flexDirection: 'row',
+                padding: 10,
+            }}>
+                <Text style={{
+                    height: 12,
+                    borderWidth: 1,
+
+                }}>12</Text>
+
+                <Text style={{
+                    height: 16,
+                    borderWidth: 1,
+                }}>16</Text>
+
+                <Text style={{
+                    height: 20,
+                    borderWidth: 1,
+                }}>20</Text>
+                <Text style={{
+                    height: 24,
+                    borderWidth: 1,
+                }}>24</Text>
+
+                <Text style={{
+                    height: 28,
+                    borderWidth: 1,
+                }}>28</Text>
+            </View>
 
           <View style={styles.getStartedContainer}>
             {this._maybeRenderDevelopmentModeWarning()}
