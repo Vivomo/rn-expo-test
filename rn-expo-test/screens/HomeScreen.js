@@ -66,7 +66,8 @@ export default class HomeScreen extends React.Component {
 
             <Text>测试不同高度文字底部对齐</Text>
 
-            <View style={{
+            <View
+                style={{
                 alignItems: 'flex-end',
                 justifyContent: 'space-between',
                 flexDirection: 'row',
@@ -96,6 +97,14 @@ export default class HomeScreen extends React.Component {
                     height: 28,
                     borderWidth: 1,
                 }}>28</Text>
+            </View>
+
+            <View style={{borderWidth: 1, position: 'relative'}}>
+                <View style={{position: 'absolute', left: 0, top: 0, borderWidth: 1, borderRadius: 15, height: 30, alignItems: 'center'}}>
+                    <Text style={{lineHeight: 30, color: 'red', opacity: 0.5}}>两行文字</Text>
+                </View>
+                <Text style={{height: 60, lineHeight: 30}} numberOfLines={2}>两行文字两行文字两行文字两行文字两行文字两行文字两行文字两行文字两行文字两行文字两行文字
+                    两行文字两行文字两行文字两行文字两行文字两行文字两行文字两行文字两行文字</Text>
             </View>
 
           <View style={styles.getStartedContainer}>
