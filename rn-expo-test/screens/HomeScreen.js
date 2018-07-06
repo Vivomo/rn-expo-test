@@ -7,7 +7,7 @@ import {
   Text,
   TouchableOpacity,
   View,
-    PixelRatio
+  PixelRatio
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
